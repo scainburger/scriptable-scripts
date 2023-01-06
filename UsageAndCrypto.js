@@ -20,18 +20,15 @@ widget.url = 'https://www.coinspot.com.au/buy/eth';
 // }
 
 async function buildWidget() {
-    const rubicImage = await loadImage('https://cdn1.iconfinder.com/data/icons/business-2-52/65/65-512.png');
-    const ethereumImage = await loadImage('https://i.imgur.com/3DMqpZY.png');
+    const rubicImage = await loadImage('https://i.imgur.com/3DMqpZY.png');
   
-   const ethereumPriceInfo = await getTokenPriceInfo('ethereum');
+    const ethereumPriceInfo = await getTokenPriceInfo('ethereum');
     const rubicPriceInfo = Math.round(ethereumPriceInfo.price * 0.59336881);
     if (rubicPriceInfo < 2500)  ethereumPriceInfo.grow = false;
   
     const roundedRubicPrice = Math.round(rubicPriceInfo * 100) / 100;
-    const roundedEthereumPrice = Math.round(ethereumPriceInfo.price);
   
-    addCrypto(ethereumImage, 'ETH', `$${roundedEthereumPrice}`, ethereumPriceInfo.grow);
-    addCrypto(rubicImage, 'Bal  ', `$${roundedRubicPrice}`, ethereumPriceInfo.grow);
+    addCrypto(rubicImage, 'Bal  \nis', `$${roundedRubicPrice}`, ethereumPriceInfo.grow);
 
 }
 
