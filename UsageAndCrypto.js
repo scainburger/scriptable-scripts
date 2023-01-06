@@ -11,13 +11,13 @@ widget.setPadding(padding, padding, padding, padding);
 
 widget.url = 'https://www.coinspot.com.au/buy/eth';
 
-const headerStack = widget.addStack();
-headerStack.setPadding(0, 0, 25, 0);
-const headerText = headerStack.addText("Ethereum Wallet");
-headerText.font = Font.mediumSystemFont(16);
-if (isDarkTheme) {
-    headerText.textColor = new Color('#FFFFFF');
-}
+// const headerStack = widget.addStack();
+// headerStack.setPadding(0, 0, 25, 0);
+// const headerText = headerStack.addText("Ethereum Wallet");
+// headerText.font = Font.mediumSystemFont(16);
+// if (isDarkTheme) {
+//     headerText.textColor = new Color('#FFFFFF');
+// }
 
 async function buildWidget() {
     const rubicImage = await loadImage('https://cdn1.iconfinder.com/data/icons/business-2-52/65/65-512.png');
