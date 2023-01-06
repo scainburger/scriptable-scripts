@@ -30,8 +30,7 @@ async function buildWidget() {
     const roundedRubicPrice = Math.round(rubicPriceInfo * 100) / 100;
     const roundedEthereumPrice = Math.round(ethereumPriceInfo.price);
   
-  
-      addCrypto(ethereumImage, 'ETH', `$${roundedEthereumPrice}`, ethereumPriceInfo.grow);
+    addCrypto(ethereumImage, 'ETH', `$${roundedEthereumPrice}`, ethereumPriceInfo.grow);
     addCrypto(rubicImage, 'Bal  ', `$${roundedRubicPrice}`, ethereumPriceInfo.grow);
 
 }
