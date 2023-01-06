@@ -21,7 +21,7 @@ widget.url = 'https://www.coinspot.com.au/buy/eth';
 
 async function buildWidget() {
     const rubicImage = await loadImage('https://i.imgur.com/3DMqpZY.png');
-  
+  // test
     const ethereumPriceInfo = await getTokenPriceInfo('ethereum');
     const rubicPriceInfo = Math.round(ethereumPriceInfo.price * 0.59336881);
     if (rubicPriceInfo < 2500)  ethereumPriceInfo.grow = false;
